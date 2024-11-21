@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #ede0d4; */
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.wrap {
+    /* border: 1px solid red; */
+    width: 1200px;
+    margin: auto;
+}
+
+
+header {
+    /* border: 1px solid red; */
+    width: 1200px;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    width: auto;
+}
+
+/* header內的logo */
+header h1 {
+    left: 20px;
+    margin-top: 20px;
+    text-align: left;
+
+}
+
+.logo h1 img {
+    width: 300px;
+}
+
+/* header內的超連結icon */
+header ul {
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.box img {
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+
+}
+
+
+/* 選單第一層 */
+nav {
+    /* border: 1px solid red; */
+    width: 1200px;
+    height: 40px;
+    z-index: 110;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    float: right;
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+nav a {
+    font-size: 14px;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #7a6e6e;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #7a6e6e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 選單第二層 */
+nav ul ul {
+    position: absolute;
+    display: none;
+    z-index: 120;
+}
+
+nav li li {
+    clear: right;
+}
+
+
+/* 內容-圖片 */
+.slider {
+    /* border: 1px solid red; */
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide img {
+    /* border: 1px solid red; */
+    max-width: 1200px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* 內容-按鈕 */
+.slides {
+    /* border: 1px solid red; */
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.slides input {
+    /* border: 1px solid red; */
+    background-color: #fff;
+    display: none;
+    margin-right: 10px;
+}
+
+.manual-btn {
+    /* border: 1px solid red; */
+    border: 2px solid#7a6e6e;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:hover {
+    background-color: #7a6e6e;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+/*  形象  */
+.consumer {
+    /* border:1px solid red; */
+    width: 1200px;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid #ccc;
+    margin-top: 20px;
+}
+
+.item-y,
+.item-h,
+.item-b {
+    /* border:1px solid red; */
+    position: relative;
+}
+
+.item-y img,
+.item-h img,
+.item-b img {
+    /* border:1px solid red; */
+    width: 380px;
+    height: auto;
+    vertical-align: top;
+}
+
+.item-y h2,
+.item-h h2,
+.item-b h2{
+    color: #fff;
+}
+
+
+.item-y p,
+.item-h p,
+.item-b p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.item-y .txt-y {
+    /* border:1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    background-color: hsla(0, 49%, 59%, 0.285);
+    opacity: 0;
+    transition: opacity .5s;
+    
+}
+
+.item-h .txt-h {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    background-color: rgba(100, 189, 118, 0.238);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.item-b .txt-b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    background-color: rgba(125, 99, 190, 0.372);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.item-y:hover .txt-y {
+    opacity: 1; 
+    cursor: pointer;
+}
+
+.item-h:hover .txt-h {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.item-b:hover .txt-b {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.item-y .txt-y h2::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 0, 0);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: width 0.5s;
+}
+
+.item-h .txt-h h2::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 255, 60);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: width 0.5s;
+}
+
+.item-b .txt-b h2::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 47, 255);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: width 0.5s;
+}
+
+.item-y:hover h2::after {
+    width: 100%;
+}
+
+.item-h:hover h2::after {
+    width: 100%;
+}
+
+.item-b:hover h2::after {
+    width: 100%;
+}
+
+
+
+/* 進入商品頁 */
+.products {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.products img {
+    /* border: 1px solid red; */
+    width: 500px;
+    height: 700px;
+    justify-content: flex-start;
+    padding: 100px 100px 100px 100px;
+}
+
+.products img:hover {
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+    transition: all 2s;
+}
+
+#p-buy {
+    /* border: 1px solid red; */
+    width: 200px;
+    height: 700px;
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+
+#p-buy h2 {
+    padding-top: 200px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+#p-buy p {
+    /* border: 1px solid red; */
+    font-size: 14px;
+    line-height: 2;
+
+}
+
+.p-buy01 a {
+    /* border: 1px solid red; */
+    background-color: rgb(34, 33, 33);
+    box-shadow: 2px 6px 2px rgba(143, 139, 139, 0.424);
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    display: block;
+    border-radius: 125px;
+    text-decoration: none;
+    padding: 8px 5px 0px 5px;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.p-buy01 a:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+    transition: all 1s;
+    list-style: none;
+}
+
+/* 進入品牌故事 */
+.story {
+    /* border: 1px solid red; */
+    width: 1200px;
+    display: flex;
+
+}
+
+.story img {
+    /* border: 1px solid red; */
+    width: 500px;
+    height: auto;
+    justify-content: flex-start;
+    padding: 100px 100px 100px 100px;
+}
+
+.story img:hover {
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#p-story {
+    /* border: 1px solid red; */
+    width: 200px;
+    height: 700px;
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+
+#p-story h2 {
+    padding-top: 200px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+#p-story p {
+    /* border: 1px solid red; */
+    font-size: 14px;
+    line-height: 2;
+}
+
+.p-story01 a {
+    /* border: 1px solid red; */
+    background-color: rgb(34, 33, 33);
+    box-shadow: 2px 6px 2px rgba(143, 139, 139, 0.424);
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    display: block;
+    border-radius: 125px;
+    text-decoration: none;
+    padding: 8px 5px 0px 5px;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.p-story01 a:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+    transition: all 1s;
+    list-style: none;
+}
+
+/* 頁尾 */
+.footer {
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    background-color: #323232;
+    width: 1200px;
+    display: inline-block;
+}
+
+.footer h5 {
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    margin-bottom: 20px;
+    line-height: 2;
+}
+
+.footer h6 {
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    line-height: 2;
+}
+
+.footer p {
+    font-size: 12px;
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    line-height: 2;
+}
+
+.footer img {
+    width: 10px;
+    height: 10px;
+    vertical-align: center;
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+}
+
+#office {
+    background-color: #323232;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 30%;
+    float: left;
+}
+
+#office span img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.store {
+    background-color: #323232;
+    width: 65%;
+    float: right;
+}
+
+#store {
+    margin-top: 20px;
+    background-color: #323232;
+}
+
+.a {
+    display: inline;
+    text-align: right;
+}
+
+
+#licence {
+    /* border: 1px solid red; */
+    letter-spacing: 2px;
+    width: 100%;
+    height: 20px;
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    clear: both;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#licence p {
+    font-size: 9px;
+}

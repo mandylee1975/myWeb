@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兒童系列行李箱/Freedom Taiwan</title>
+
+    <link rel="stylesheet" href="./product-c.css">
+    <link rel="stylesheet" href="../lightbox/css/lightbox.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!--頁首-logo+icon -->
+        <header>
+            <div class="logo">
+
+                <h1><img src="../carousel/images/Logo-16.png" alt=""></h1>
+            </div>
+
+            <div class="box">
+                <ul>
+                    <a href="#" alt=""><img src="../carousel/icon/search.svg" alt=""></a>
+                    <a href="#" alt=""><img src="../carousel/icon/user.svg" alt=""></a>
+                    <a href="#" alt=""><img src="../carousel/icon/shopping-cart.svg" alt=""></a>
+                    <div class="cart" data-totalitems="0">
+                        <a href="../carousel/icon/shopping-cart.svg"></a>
+                    </div>
+                </ul>
+            </div>
+        </header>
+
+
+
+        <!-- 選單 -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="../help/help.html">HELP</a>
+
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="../about us/about us.html">ABOUT US</a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="../products/product.html">PRODUCT</a>
+                </li>
+            </ul>
+
+
+            <ul>
+                <li>
+                    <a href="../index/index.html">HOME</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!--商品內容 -->
+
+        <div class="container">
+
+            <!-- 左商品圖片(大) -->
+
+            <img id="img" src="./img/img5.jpg">
+
+            <!-- 左商品圖片(小) -->
+            <div id="img-down">
+
+                <a href="./img/img0-2.jpg" data-lightbox="group" data-title="PINEER系列-白色"></li>
+                    <img src="./img/img0-2.jpg" alt="">
+                </a>
+                <a href="./img/img0-3.jpg" data-lightbox="group" data-title="PINEER系列-白色"></li>
+                    <img src="./img/img0-3.jpg" alt="">
+                </a>
+                <a href="./img/img0-4.jpg" data-lightbox="group" data-title="PINEER系列-白色"></li>
+                    <img src="./img/img0-4.jpg" alt="">
+                </a>
+                <a href="./img/img0-5.jpg" data-lightbox="group" data-title="PINEER系列-白色"></li>
+                    <img src="./img/img0-5.jpg" alt="">
+                </a>
+            </div>
+
+            <!-- 商品敘述 -->
+            <div class="products-content">
+
+                <div id="item01">
+                    <h2>FREEDOM CHILDREN系列</h2>
+                    <h5>硬式活動四輪登機箱</h5>
+                    <h5>價格NT$3800</h5>
+                </div>
+
+                <!-- 商品尺寸選單 -->
+                <h5>尺寸</h5>
+                <div class="size-manual">
+                    <div id="size-20">
+                        <p>20吋</p>
+                        <input type="radio" name="size" value="20">
+                    </div>
+                    <div id="size-22">
+                        <p>22吋</p>
+                        <input type="radio" name="size" value="22">
+                    </div>
+                    <div id="size-24">
+                        <p>24吋</p>
+                        <input type="radio" name="size" value="24">
+                    </div>
+                </div>
+
+
+                <!-- 商品顏色按鈕 -->
+                <h5>顏色</h5>
+                <div class="color">
+                    <div id="white">
+                        <p>抺茶綠色</p>
+                        <button type="annu1" class="button1" onclick="get_num('5')">1</button>
+                    </div>
+                    <div id="navy">
+                        <p>黑色</p>
+                        <button type="annu2" class="button2" onclick="get_num('6')">2</button>
+                    </div>
+                    <div id="black">
+                        <p>白色</p>
+                        <button type="annu3" class="button3" onclick="get_num('7')">3</button>
+                    </div>
+                    <div id="silver">
+                        <p>紅色</p>
+                        <button type="annu4" class="button4" onclick="get_num('8')">4</button>
+                    </div>
+                    <div id="sky">
+                        <p>水藍色</p>
+                        <button type="annu5" class="button5" onclick="get_num('9')">5</button>
+                    </div>
+
+                    <script>
+                        function get_num(num) {
+                            document.getElementById('img').src = "./img/img" + num + ".jpg"
+                        };
+                    </script>
+                </div>
+
+
+                <!-- 商品數量加減 -->
+                <div class="quantity">
+                    <h5>數量</h5>
+                    <ul class="btn-numbox">
+                        <li>
+                            <ul class="count">
+                                <li><span id="num-jian" class="num-jian">-</span></li>
+                                <li><input type="text" class="input-num" id="input-num" value="0" /></li>
+                                <li><span id="num-jia" class="num-jia">+</span></li>
+                            </ul>
+                    </ul>
+
+                    <script>
+                        var num_jia = document.getElementById("num-jia");
+                        var num_jian = document.getElementById("num-jian");
+                        var input_num = document.getElementById("input-num");
+
+                        num_jia.onclick = function () {
+                            input_num.value = parseInt(input_num.value) + 1;
+                        }
+                        num_jian.onclick = function () {
+                            if (input_num.value <= 0) {
+                                input_num.value = 0;
+                            } else {
+                                input_num.value = parseInt(input_num.value) - 1;
+                            }
+                        }
+                    </script>
+                </div>
+
+               <!-- 加入購物車 -->
+               <div class="page-wrapper">
+                <button id="sendtocart">加入購物車 <div class="cart-item"></div> </button>
+                <button id="removefromcart">移除購物車</button>
+            </div>
+           
+
+            <script> let cartCount = 0;
+                // 購物車計數 
+                function updateCartNotification() { document.querySelector('.cart').setAttribute('data-totalitems', cartCount); document.getElementById("cart-notification").innerText = `購物車商品數量: ${cartCount}`; }
+                // 當按下"加入購物車"按鈕 
+                document.getElementById("sendtocart").addEventListener("click", function () {
+                    cartCount++;
+                    // 增加購物車計數 
+                    updateCartNotification();
+                });
+                // 當按下"移除購物車"按鈕 
+                document.getElementById("removefromcart").addEventListener("click", function () {
+                    if (cartCount > 0) {
+                        cartCount--;
+                        // 減少購物車計數 
+                        updateCartNotification();
+                    }
+                }); </script>
+            </div>
+        </div>
+
+               <!-- 產品資訊 -->
+               <div class="p-info">
+
+                <div id="wheel">
+                    <img src="../carousel/images/introduce-01.png" alt="">
+                    <h2> 360度旋轉飛機輪</h2>
+                    <p>我們的行李箱採用360度旋轉飛機輪，能方便移動。而且這些輪子的設計是防滑且靜音。</p>
+                    <p>All of our Kono suitcases come with 360 degree, spinning wheels designed for easy movement. These
+                        wheels are antiskid and are with a silent design.</p>
+                </div>
+    
+                <div id="handle">
+                    <img src="../carousel/images/introduce-02.png" alt="">
+                    <h2>鋁合金拉桿</h2>
+                    <p>我們的行李箱採用鋁製伸縮拉桿，更堅固、更輕。短拉桿能使提舉變得更加容易。</p>
+                    <p>Our luggage comes with aluminum telescopic handle which is more sturdy and lighter. The easy grab
+                        short handle makes lifting easier.</p>
+                </div>
+    
+                <div id="strap">
+                    <img src="../carousel/images/introduce-03.png" alt="">
+                    <h2>多隔層網袋</h2>
+                    <p>我們行李箱內部的設計採網狀口袋、拉鍊隔層和交叉帶，可讓收納發揮最大功能，讓你能更整齊地收納你的物品。</p>
+                    <p>The interior of the suitcase is designed with mesh pocket, zipped divider and cross-strap to maximize
+                        yourpacking power and you can pack your belongings neatly.</p>
+                </div>
+            </div>
+
+
+        <!-- 頁尾-->
+        <div class="footer">
+
+            <div id="office">
+                <h5>聯絡資訊</h5>
+                <p><img src="../carousel/icon/iconmonstr-phone-thin.svg" alt="">&nbsp;&nbsp;客服Tel：+886-02-2954-6666
+                </p>
+                <p><img src="../carousel/icon/iconmonstr-time-2.svg" alt="">&nbsp;&nbsp;客服時間：週一至週五 9:00-12:00 13:30-18:00
+                </p>
+                <p><img src="../carousel/icon/iconmonstr-mail-thin.svg" alt="">&nbsp;&nbsp;信箱E-Mail：service@freedom.com.tw
+                </p>
+                <p><span><img src="../carousel/images/freedom-logo-02.png" alt=""></span></p>
+
+
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <!-- <a class="a2a_dd" href="https://www.addtoany.com/share"></a> -->
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_threads"></a>
+                    <a class="a2a_button_line"></a>
+                    <a class="a2a_button_pinterest"></a>
+                    <a class="a2a_button_wechat"></a>
+                    <a class="a2a_button_x"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+            </div>
+
+            <div class="store">
+                <div id="store">
+                    <h5>銷售門市</h5>
+                    <h6>北部門市-家樂福樹林店</h6>
+                    <p><img src="../carousel/icon/iconmonstr-location-2.svg" alt="">&nbsp;&nbsp;地址：新北市樹林區大安路118號
+                    </p>
+                    <p><img src="../carousel/icon/iconmonstr-phone-thin.svg" alt="">&nbsp;&nbsp;Tel：02-2681-0000
+                    </p>
+                    <p><img src="../carousel/icon/iconmonstr-time-2.svg" alt="">&nbsp;&nbsp;營業時間：AM10:00-PM10:30
+                    </p>
+
+                    <div id="store">
+                        <h6>桃園門市-家樂福中原店</h6>
+                        <p><img src="../carousel/icon/iconmonstr-location-2.svg" alt="">&nbsp;&nbsp;地址：桃園市中壢區中華路二段501號
+                        </p>
+                        <p><img src="../carousel/icon/iconmonstr-phone-thin.svg" alt="">&nbsp;&nbsp;Tel：03-433-4601
+                        </p>
+                        <p><img src="../carousel/icon/iconmonstr-time-2.svg" alt="">&nbsp;&nbsp;營業時間：AM10:00-PM10:30
+                        </p>
+                    </div>
+
+                    <div id="store">
+                        <h6>中部門市-家樂福文心店</h6>
+                        <p><img src="../carousel/icon/iconmonstr-location-2.svg" alt="">&nbsp;&nbsp;地址：台中市南屯區文心路一段521號
+                        </p>
+                        <p><img src="../carousel/icon/iconmonstr-phone-thin.svg" alt="">&nbsp;&nbsp;Tel：04-2254-3355
+                        </p>
+                        <p><img src="../carousel/icon/iconmonstr-time-2.svg" alt="">&nbsp;&nbsp;營業時間：AM10:00-PM10:30
+                        </p>
+                    </div>
+
+                    <div id="store">
+                        <h6>南部門市-家樂福新楠店</h6>
+                        <p><img src="../carousel/icon/iconmonstr-location-2.svg" alt="">&nbsp;&nbsp;地址：高雄市楠梓區土庫一路60號
+                        </p>
+                        <p><img src="../carousel/icon/iconmonstr-phone-thin.svg" alt="">&nbsp;&nbsp;Tel：07-351-8096
+                        </p>
+                        <p><img src="../carousel/icon/iconmonstr-time-2.svg" alt="">&nbsp;&nbsp;營業時間：AM10:00-PM10:30
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="licence">
+                <p>&copy;2024-Freedom. All right reserved.</p>
+            </div>
+        </div>
+        <script src="../lightbox/jquery/jquery-1.11.3.min.js"></script>
+        <script src="../lightbox/js/lightbox.js"></script>
+    </div>
+
+</body>
+
+</html>

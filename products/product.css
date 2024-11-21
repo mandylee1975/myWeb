@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #ede0d4; */
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.wrap {
+    /* border: 1px solid red; */
+    width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+/* header內的icon */
+header {
+    /* border: 1px solid red; */
+    width: 1200px;
+    height: 90px;
+    display: flex;
+    border-bottom: 5px solid #7a6e6e;
+    justify-content: space-between;
+}
+
+
+/* header內的icon */
+.box img {
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;   
+}
+
+.logo img {
+    /* border: 1px solid red; */
+    width: 300px;
+    justify-content: center;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+/* 選單第一層 */
+nav {
+    /* border: 1px solid red; */
+    width: 370x;
+    height: 40px;
+    display: flex;
+    margin-top: 50px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    float: right;
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+nav a {
+    /* border: 1px solid red; */
+    font-size: 14px;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #7a6e6e;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #7a6e6e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.banner {
+    width: 1200px;
+    height: 950px;
+   
+}
+
+/* 購物車 */
+.container {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    margin-top: 300px;
+    position: absolute;
+}
+
+button {
+    /* border: 1px solid red; */
+    width: 80px;
+    height: 30px;
+    background-color: #323232;
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    float: right;
+    margin-top: 20px;
+}
+
+.card-pineer {
+    display: block;
+    background-color: #323232;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+    padding: 120px 10px 0 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.card-pineer a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #323232;
+    color: #fff;
+}
+
+.card-pineer a:hover {
+    color: #ccc;
+    transition: background-color .3s;
+}
+
+.row {
+    /* border: 1px solid red; */
+    width: 1200px;
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    /* border: 1px solid red; */
+    background-color: #fff;
+    width: 150px;
+    height: 270px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.card-img-top {
+    /* border:1px solid red; */
+    width: 150px;
+    height: 160px;
+    border-radius: 10px;
+}
+
+.card-block {
+    /* border:1px solid red; */
+    width: 130px;
+    height: 50px;
+    font-size: 12px;
+    padding-top: 5px;
+    line-height: 2.5;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.show-cart {
+    margin-top: 20px;
+}
+
+.show-cart li {
+    /* border:1px solid red; */
+    display: block;
+    padding-top: 10px;
+}
+
+.add-to-cart {
+    /* border:1px solid red; */
+    width: 80px;
+    background-color: #323232;
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid#7a6e6e;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all .3s;
+    margin-top: 20px;
+}
+
+.add-to-cart:hover {
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+    transform: scale(1.5, 1.5);
+}
+
+/* 頁尾 */
+.footer {
+    /* border: 1px solid red; */
+    margin-top: 600px;
+    background-color: #323232;
+    width: 1200px; 
+}
+
+.footer h5 {
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    margin-bottom: 20px;
+    line-height: 2;
+}
+
+.footer h6 {
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    line-height: 2;
+}
+
+.footer p {
+    font-size: 12px;
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    line-height: 2;
+}
+
+.footer img {
+    width: 10px;
+    height: 10px;
+    vertical-align: center;
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+}
+
+#office {
+    background-color: #323232;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 30%;
+    float: left;
+}
+
+#office span img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.store {
+    background-color: #323232;
+    width: 65%;
+    float: right;
+}
+
+#store {
+    margin-top: 20px;
+    background-color: #323232;
+}
+
+.a {
+    display: inline;
+    text-align: right;
+}
+
+#licence {
+    /* border: 1px solid red; */
+    letter-spacing: 2px;
+    width: 100%;
+    height: 20px;
+    background-color: #323232;
+    color: hsl(0, 3%, 82%);
+    clear: both;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#licence p {
+    font-size: 9px;
+}
+
+/* 2024.11.14 */
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer{    
+    margin-top: 0;
+}
